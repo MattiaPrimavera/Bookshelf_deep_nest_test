@@ -1,7 +1,12 @@
-var Bookshelf = require('./bookshelf');
+let BaseModel = require('./base_model');
+let Bookshelf = require('./bookshelf')
 
-var Contact = Bookshelf.Model.extend({
-    tableName: 'contacts'
+require('./person')
+var Contact = BaseModel.extend({
+    tableName: 'contacts',
+    person: function() {
+        return this.belongsToMany('Person', 'idContact')
+    }
 })
 
 console.log('Exporting contact')

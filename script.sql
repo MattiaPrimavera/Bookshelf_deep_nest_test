@@ -1,7 +1,7 @@
-use "bookshelf_relations_test";
+use "btest";
 
 CREATE TABLE IF NOT EXISTS `contacts` (
-    `id` INT NOT NULL,
+    `id` INT NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(45) NOT NULL,
     PRIMARY KEY(`id`)
 );
@@ -19,3 +19,6 @@ CREATE TABLE IF NOT EXISTS `person` (
     ON UPDATE NO ACTION)
 
 ENGINE = InnoDB;
+
+insert into contacts(name) values("Amine");
+insert into person(name, idContact) values("Mattia", 1);

@@ -2,9 +2,9 @@ var Bookshelf = require('bookshelf')
 var knex = require('./knex')
 
 console.log('Instanciating Bookshelf')
-var Bookshelf = Bookshelf(knex)
+var bookshelf = Bookshelf(knex)
 
-Bookshelf.plugin('registry')
+bookshelf.plugin('registry')
 
 console.log('Building bookshelf')
-module.exports = Bookshelf
+module.exports = bookshelf

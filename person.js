@@ -1,12 +1,17 @@
-var Bookshelf = require('./bookshelf');
-console.log('Bookshelf exported : ' + JSON.stringify(Bookshelf))
+let BaseModel = require('./base_model');
+let Bookshelf = require('./bookshelf')
 
-const Contact = require('./contact')
-var Person = Bookshelf.Model.extend({
+require('./contact')
+var Person = BaseModel.extend({
     tableName: 'person',
     contact: function(){
-        return this.hasOne('Contact', 'id', 'idContact')
+        console.log('Contact model function called!!!!!!!')
+        return this.hasOne('Contact', 'id')
     }
+}, {
+    withRelated: [
+        'contact'
+    ]
 })
 
 console.log('Exporting Person')
