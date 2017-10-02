@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bookshelf": "^0.10.4"
+    "bookshelf": "^0.10.4",
+    "knex": "^0.13.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
