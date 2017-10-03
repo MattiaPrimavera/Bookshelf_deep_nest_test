@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "bookshelf": "^0.10.4",
-    "knex": "^0.13.0"
+    "bookshelf-manager": "^0.3.0",
+    "knex": "^0.13.0",
+    "when": "^3.7.8"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
